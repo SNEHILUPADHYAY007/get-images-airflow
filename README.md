@@ -4,6 +4,9 @@ The Rocket Launch Project is an Apache Airflow-based ETL pipeline that extracts 
 # Description
 The Rocket Launch Project is an example of an Apache Airflow-based ETL (Extract, Transform, Load) pipeline designed to pull data from a public API, process the data, and store it locally. The project demonstrates how to use Airflow's powerful scheduling and data pipeline capabilities within a Docker containerized environment.
 
+# Graph View of the DAGS Task
+![DAGS TASK DIAG](./assets/task_diag.jpg)
+
 # Features
 * Data Extraction: Uses requests to fetch upcoming rocket launch data from the SpaceDevs API.
 * Data Processing: Implements Airflow DAGs (Directed Acyclic Graphs) to manage and automate workflows.
@@ -32,6 +35,19 @@ docker run --rm -d -p 8080:8080 -v /d/Apache-airflow/Rocket_launch_project/tmp:/
 ```
 ### 4. Access the Airflow web interface:
 Open your browser and navigate to http://localhost:8080 to access the Airflow UI.
+
+# Project Structure(Only important files/folders)
+```
+rocket-launch-project/
+├── dags/
+│   └── main.py               # Airflow DAG definition
+├── tmp/
+│   └── images/               # To store file locally
+│   └── launches.json         # Response JSON file
+├── Dockerfile                # Dockerfile to build the image
+├── constraints-3.8.txt       # Python dependencies
+└── README.md                 # Project documentation
+```
 
 
 
