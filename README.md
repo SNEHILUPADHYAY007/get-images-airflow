@@ -31,7 +31,8 @@ docker build -t airflow-rocket-launch .
 ```
 ### 3. Run the Docker container:
 ```
-docker run --rm -d -p 8080:8080 -v /d/Apache-airflow/Rocket_launch_project/tmp:/opt/airflow/tmp airflow-launch
+# Edit the Local path as per your need
+docker run --rm -d -p 8080:8080 -v /d/Apache-airflow/Rocket_launch_project/tmp:/opt/airflow/tmp airflow-rocket-launch
 ```
 ### 4. Access the Airflow web interface:
 Open your browser and navigate to http://localhost:8080 to access the Airflow UI.
